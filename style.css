@@ -1,0 +1,148 @@
+html {
+    font-family: sans-serif;
+}
+
+.card-container {
+    margin: 1px;
+    width: 310px;
+    height: 410px;
+    border: 1px solid black;
+    border-radius: 5%;
+    background-image: linear-gradient(rgb(148, 148, 148), rgb(234, 234, 234));
+}
+
+.avatar {
+    position: relative;
+    right: 2.2rem;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    background-color: white;
+    margin: 2px;
+}
+
+.card-header {
+    border-bottom: 1px solid black;
+    height: 14%;
+    padding-bottom: 5px;
+}
+
+
+.header-items {
+    margin: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    gap: 1rem;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+
+li {
+    list-style: none;
+}
+
+.author {
+    position: relative;
+    right: 3rem;
+    bottom: 0.4rem;
+    font-weight: lighter;
+    font-size: 14px;
+}
+
+.publication-date {
+    position: relative;
+    top: 0.6rem;
+    right: 137px;
+    font-size: 12px;
+    color: white;
+    font-weight: lighter;
+
+}
+
+.more {
+    width: 20px;
+    height: 20px;
+}
+
+.publication-img {
+    width: 100%;
+    height: 420%;
+}
+
+
+
+.buttons img {
+    width: 18px;
+    height: 18px;
+}
+
+.buttons {
+    position: relative;
+    right: 7%;
+}
+
+.footer-items {
+    display: flex;
+    flex-direction: row;
+    gap: 0.6rem;
+}
+
+.text {
+    position: relative;
+    bottom: 10px;
+    height: 100px;
+    font-size: 13px;
+    text-align: justify;
+    padding: 0px 5px;
+    font-weight: lighter;
+    line-height: 1.9ch;
+}
+
+#gatto {
+    font-weight: bold;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 310px);
+    grid-template-rows: 1fr;
+    gap: 1rem;
+    grid-template-areas: "post-1 post-2 post-3";
+}
+
+#post-1 {
+    grid-area: post-1;
+}
+
+#post-2 {
+    grid-area: post-2;
+}
+
+#post-3 {
+    grid-area: post-3;
+}
+
+@media screen and (max-width: 967px) {
+    .grid-container {
+        display: grid;
+        grid-template-columns: repeat(3, 310px);
+        grid-template-rows: 1fr 1fr;
+        gap: 1rem;
+        grid-template-areas: "post-1 post-2 . "
+                                "post-3 . .";
+    }
+}
+
+@media screen and (max-width: 650px) {
+    .grid-container {
+        display: grid;
+        grid-template-columns: 310px;
+        grid-template-rows: repeat(3, 1fr);
+        gap: 1rem;
+        grid-template-areas: "post-1"
+                                "post-2"
+                                "post-3";
+    }
+}
